@@ -7,6 +7,7 @@ C_id = 1
 dict = {}
 dict2 = {}
 
+#Please try to create the youtube table structure first
 
 
 
@@ -23,21 +24,22 @@ for line in file:
 		value_String=value_String.rstrip( '\n' );
 		#print key_String		
 		#print value_String		
-		youtube_line = {key_String:value_String}
-		#print youtube_line
-		dict.update(youtube_line)
-		#db.lappend(C_id,key_String,value_String)
+		youtube_line = (key_String,value_String}
+		print youtube_line
+		#dict.update(youtube_line)
+		db.dadd(C_id,key_String,value_String)
 		#db.set(key_String, value_String) 
 		if key_String=="_uid":
-			add_dict2 = {C_id:dict}
+			#add_dict2 = {C_id:dict}
 			C_id = C_id+1
-			print dict
+			#print dict
 			print '\n\n\n\n\n'			
-			dict2.update(add_dict2)
+			#dict2.update(add_dict2)
 	
 	
 print dict2
 file.close()
+db.dump()
 	
 #db_string = input_string.split()
 """if db_string[0] == "exit":
